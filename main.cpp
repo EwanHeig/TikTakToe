@@ -8,6 +8,7 @@ void affichage (int c1,int c2,int c3,int c4,int c5,int c6,int c7,int c8,int c9);
 char conversion(int c);
 void jeuxHumain();
 void jeuxRobot();
+int nombreAleatoir();
 
 int case1 = 0, case2 = 0, case3 = 0, case4 = 0, case5 = 0, case6 = 0, case7 = 0, case8 = 0, case9 = 0;
 
@@ -42,9 +43,8 @@ int main() {
 void assignation ( int valeur,bool mode){
     int numero_case;
     int erreur = 1;
-    int nombreAleatoire = 0;
-    const int MAX = 9;
-    const int MIN = 0;
+    int nombreHasard;
+
 
 
 
@@ -69,20 +69,20 @@ void assignation ( int valeur,bool mode){
 
 
     else if (mode == 0){
-        srand(time(NULL));
-        nombreAleatoire = (rand() % (MAX - MIN + 1)) + MIN;
+
 
         while(erreur){
-            switch (nombreAleatoire) {
-                case 1: if(case1 == 0){ case1 = valeur;erreur = 0;} else{ nombreAleatoire = (rand() % (MAX - MIN + 1)) + MIN;} break;
-                case 2: if(case2 == 0){ case2 = valeur;erreur = 0;} else{ nombreAleatoire = (rand() % (MAX - MIN + 1)) + MIN;} break;
-                case 3: if(case3 == 0){ case3 = valeur;erreur = 0;} else{ nombreAleatoire = (rand() % (MAX - MIN + 1)) + MIN;} break;
-                case 4: if(case4 == 0){ case4 = valeur;erreur = 0;} else{ nombreAleatoire = (rand() % (MAX - MIN + 1)) + MIN;} break;
-                case 5: if(case5 == 0){ case5 = valeur;erreur = 0;} else{ nombreAleatoire = (rand() % (MAX - MIN + 1)) + MIN;} break;
-                case 6: if(case6 == 0){ case6 = valeur;erreur = 0;} else{ nombreAleatoire = (rand() % (MAX - MIN + 1)) + MIN;} break;
-                case 7: if(case7 == 0){ case7 = valeur;erreur = 0;} else{ nombreAleatoire = (rand() % (MAX - MIN + 1)) + MIN;} break;
-                case 8: if(case8 == 0){ case8 = valeur;erreur = 0;} else{ nombreAleatoire = (rand() % (MAX - MIN + 1)) + MIN;} break;
-                case 9: if(case9 == 0){ case9 = valeur;erreur = 0;} else{ nombreAleatoire = (rand() % (MAX - MIN + 1)) + MIN;} break;
+            nombreHasard = nombreAleatoir();
+            switch (nombreHasard) {
+                case 1: if(case1 == 0){ case1 = valeur;erreur = 0;} else{ nombreHasard = nombreAleatoir();} break;
+                case 2: if(case2 == 0){ case2 = valeur;erreur = 0;} else{ nombreHasard = nombreAleatoir();} break;
+                case 3: if(case3 == 0){ case3 = valeur;erreur = 0;} else{ nombreHasard = nombreAleatoir();} break;
+                case 4: if(case4 == 0){ case4 = valeur;erreur = 0;} else{ nombreHasard = nombreAleatoir();} break;
+                case 5: if(case5 == 0){ case5 = valeur;erreur = 0;} else{ nombreHasard = nombreAleatoir();} break;
+                case 6: if(case6 == 0){ case6 = valeur;erreur = 0;} else{ nombreHasard = nombreAleatoir();} break;
+                case 7: if(case7 == 0){ case7 = valeur;erreur = 0;} else{ nombreHasard = nombreAleatoir();} break;
+                case 8: if(case8 == 0){ case8 = valeur;erreur = 0;} else{ nombreHasard = nombreAleatoir();} break;
+                case 9: if(case9 == 0){ case9 = valeur;erreur = 0;} else{ nombreHasard = nombreAleatoir();} break;
                 default : break;
             }
 
@@ -214,4 +214,16 @@ void jeuxRobot(){
         cout<< "Dommage, le bot a gagne ! "<<endl;
     }
 
+}
+
+int nombreAleatoir(){
+    int nombre;
+    const int MAX = 9;
+    const int MIN = 0;
+
+
+    srand(time(NULL));
+    nombre = (rand() % (MAX - MIN + 1)) + MIN;
+
+    return nombre;
 }
