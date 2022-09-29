@@ -25,7 +25,7 @@ void jeuxRobot();
 int nombreAleatoir();
 
 int case1 = 0, case2 = 0, case3 = 0, case4 = 0, case5 = 0, case6 = 0, case7 = 0, case8 = 0, case9 = 0;
-int compteur = 0;
+int compteur = 0;//compteur de coup en cas de match nul
 
 int main() {
     int choix = 0;
@@ -137,7 +137,7 @@ int verifVictoire(int victory){
     else if (lignes1 == 8||lignes2 == 8||lignes3 == 8||colonnes1 == 8||colonnes2 == 8||colonnes3 == 8||diagonale1 == 8||diagonale2 == 8 ){
         victory = 2;//victoire du joueur 2
     }
-    else if(compteur==9){
+    else if(compteur==9){//si 9 coups on été joué
         victory = 3;
     }
 
@@ -252,10 +252,13 @@ void jeuxRobot(){
     }
 
     //message de victoire en fonction du gagnant
+    //message de victoire en fonction du gagnant
     if (verifVictoire(victoire) == 1){
-        cout<< "Bravo , vous avez gagne ! "<<endl;
-    }else{
-        cout<< "Dommage, le bot a gagne ! "<<endl;
+        cout<< "Bravo J1, vous avez gagne ! "<<endl;
+    }else if(verifVictoire(victoire) == 2){
+        cout<< "Dommage, le bot gagne... "<<endl;
+    }else if(verifVictoire(victoire) == 3){
+        cout<< "Match nul"<<endl;
     }
 
 }
