@@ -88,6 +88,7 @@ void assignation ( int valeur,bool mode){
     else if (mode == 0){ //tour du bot
 
         //boucle tant qu'une case vide n'est pas choisie
+        cout<<"le bot Choisis..."<<endl;
         while(erreur){
 
             //Choisi un nombre au hasard
