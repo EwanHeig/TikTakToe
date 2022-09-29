@@ -1,3 +1,17 @@
+/*
+-----------------------------------------------------------------------------------
+Nom du fichier  : TikTakToe.cpp
+Auteur(s)       : Patrick Maillard, Ewan Bloechle, Guilherme Pinto
+Date creation   : 27.09.2022
+
+Description     : Jeux TicTacToe
+
+Remarque(s)     : À exécuter sur la console Windows. (Problème avec le clear)
+
+Compilateur     : Mingw-w64 g++ 11.2.0
+-----------------------------------------------------------------------------------
+*/
+
 #include <iostream>
 
 using namespace std;
@@ -35,7 +49,7 @@ int main() {
         }
     }
 
-
+    system("pause");
     return EXIT_SUCCESS;
 }
 
@@ -129,7 +143,11 @@ int verifVictoire(int victory){
 
 //fonction d'affichage prenant en paramètre les 9 cases à afficher
 void affichage (int c1,int c2,int c3,int c4,int c5,int c6,int c7,int c8,int c9){
-    //converti les case en X ou O
+
+   //Efface la grille précèdente
+   system("CLS");
+   cout << "Jeu actuel: " << endl;
+   //converti les case en X ou O
     char ca1 = conversion(c1);
     char ca2 = conversion(c2);
     char ca3 = conversion(c3);
