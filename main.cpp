@@ -25,6 +25,7 @@ void jeuxRobot();
 int nombreAleatoir();
 
 int case1 = 0, case2 = 0, case3 = 0, case4 = 0, case5 = 0, case6 = 0, case7 = 0, case8 = 0, case9 = 0;
+int compteur = 0;
 
 int main() {
     int choix = 0;
@@ -69,15 +70,15 @@ void assignation ( int valeur,bool mode){
         while(erreur){
             //verifie si la case est libre, si oui la remplie, si non demande d'en choisir une autre
             switch (numero_case) {
-                case 1: if(case1 == 0){ case1 = valeur;erreur = 0;} else{cout<<"case indisponible, rechoisissez : "<<endl; cin>> numero_case;} break;
-                case 2: if(case2 == 0){ case2 = valeur;erreur = 0;} else{cout<<"case indisponible, rechoisissez : "<<endl; cin>> numero_case;} break;
-                case 3: if(case3 == 0){ case3 = valeur;erreur = 0;} else{cout<<"case indisponible, rechoisissez : "<<endl; cin>> numero_case;} break;
-                case 4: if(case4 == 0){ case4 = valeur;erreur = 0;} else{cout<<"case indisponible, rechoisissez : "<<endl; cin>> numero_case;} break;
-                case 5: if(case5 == 0){ case5 = valeur;erreur = 0;} else{cout<<"case indisponible, rechoisissez : "<<endl; cin>> numero_case;} break;
-                case 6: if(case6 == 0){ case6 = valeur;erreur = 0;} else{cout<<"case indisponible, rechoisissez : "<<endl; cin>> numero_case;} break;
-                case 7: if(case7 == 0){ case7 = valeur;erreur = 0;} else{cout<<"case indisponible, rechoisissez : "<<endl; cin>> numero_case;} break;
-                case 8: if(case8 == 0){ case8 = valeur;erreur = 0;} else{cout<<"case indisponible, rechoisissez : "<<endl; cin>> numero_case;} break;
-                case 9: if(case9 == 0){ case9 = valeur;erreur = 0;} else{cout<<"case indisponible, rechoisissez : "<<endl; cin>> numero_case;} break;
+                case 1: if(case1 == 0){ case1 = valeur;erreur = 0;compteur++;} else{cout<<"case indisponible, rechoisissez : "<<endl; cin>> numero_case;} break;
+                case 2: if(case2 == 0){ case2 = valeur;erreur = 0;compteur++;} else{cout<<"case indisponible, rechoisissez : "<<endl; cin>> numero_case;} break;
+                case 3: if(case3 == 0){ case3 = valeur;erreur = 0;compteur++;} else{cout<<"case indisponible, rechoisissez : "<<endl; cin>> numero_case;} break;
+                case 4: if(case4 == 0){ case4 = valeur;erreur = 0;compteur++;} else{cout<<"case indisponible, rechoisissez : "<<endl; cin>> numero_case;} break;
+                case 5: if(case5 == 0){ case5 = valeur;erreur = 0;compteur++;} else{cout<<"case indisponible, rechoisissez : "<<endl; cin>> numero_case;} break;
+                case 6: if(case6 == 0){ case6 = valeur;erreur = 0;compteur++;} else{cout<<"case indisponible, rechoisissez : "<<endl; cin>> numero_case;} break;
+                case 7: if(case7 == 0){ case7 = valeur;erreur = 0;compteur++;} else{cout<<"case indisponible, rechoisissez : "<<endl; cin>> numero_case;} break;
+                case 8: if(case8 == 0){ case8 = valeur;erreur = 0;compteur++;} else{cout<<"case indisponible, rechoisissez : "<<endl; cin>> numero_case;} break;
+                case 9: if(case9 == 0){ case9 = valeur;erreur = 0;compteur++;} else{cout<<"case indisponible, rechoisissez : "<<endl; cin>> numero_case;} break;
                 default : break;
             }
 
@@ -96,15 +97,15 @@ void assignation ( int valeur,bool mode){
 
             //verifie si la case est libre, si oui la remplie, si non en choisir une autre aleatoire
             switch (nombreHasard) {
-                case 1: if(case1 == 0){ case1 = valeur;erreur = 0;} else{nombreHasard = nombreAleatoir();} break;
-                case 2: if(case2 == 0){ case2 = valeur;erreur = 0;} else{nombreHasard = nombreAleatoir();} break;
-                case 3: if(case3 == 0){ case3 = valeur;erreur = 0;} else{nombreHasard = nombreAleatoir();} break;
-                case 4: if(case4 == 0){ case4 = valeur;erreur = 0;} else{nombreHasard = nombreAleatoir();} break;
-                case 5: if(case5 == 0){ case5 = valeur;erreur = 0;} else{nombreHasard = nombreAleatoir();} break;
-                case 6: if(case6 == 0){ case6 = valeur;erreur = 0;} else{nombreHasard = nombreAleatoir();} break;
-                case 7: if(case7 == 0){ case7 = valeur;erreur = 0;} else{nombreHasard = nombreAleatoir();} break;
-                case 8: if(case8 == 0){ case8 = valeur;erreur = 0;} else{nombreHasard = nombreAleatoir();} break;
-                case 9: if(case9 == 0){ case9 = valeur;erreur = 0;} else{nombreHasard = nombreAleatoir();} break;
+                case 1: if(case1 == 0){ case1 = valeur;erreur = 0;compteur++;} else{nombreHasard = nombreAleatoir();} break;
+                case 2: if(case2 == 0){ case2 = valeur;erreur = 0;compteur++;} else{nombreHasard = nombreAleatoir();} break;
+                case 3: if(case3 == 0){ case3 = valeur;erreur = 0;compteur++;} else{nombreHasard = nombreAleatoir();} break;
+                case 4: if(case4 == 0){ case4 = valeur;erreur = 0;compteur++;} else{nombreHasard = nombreAleatoir();} break;
+                case 5: if(case5 == 0){ case5 = valeur;erreur = 0;compteur++;} else{nombreHasard = nombreAleatoir();} break;
+                case 6: if(case6 == 0){ case6 = valeur;erreur = 0;compteur++;} else{nombreHasard = nombreAleatoir();} break;
+                case 7: if(case7 == 0){ case7 = valeur;erreur = 0;compteur++;} else{nombreHasard = nombreAleatoir();} break;
+                case 8: if(case8 == 0){ case8 = valeur;erreur = 0;compteur++;} else{nombreHasard = nombreAleatoir();} break;
+                case 9: if(case9 == 0){ case9 = valeur;erreur = 0;compteur++;} else{nombreHasard = nombreAleatoir();} break;
                 default : break;
             }
 
@@ -135,6 +136,9 @@ int verifVictoire(int victory){
     //sinon si une des lignes, colonnes ou diagonal est rempli par le joueur 2 (2*2*2=8)
     else if (lignes1 == 8||lignes2 == 8||lignes3 == 8||colonnes1 == 8||colonnes2 == 8||colonnes3 == 8||diagonale1 == 8||diagonale2 == 8 ){
         victory = 2;//victoire du joueur 2
+    }
+    else if(compteur==9){
+        victory = 3;
     }
 
     //retourne le joueur victorieux
@@ -209,8 +213,10 @@ void jeuxHumain(){
     //message de victoire en fonction du gagnant
     if (verifVictoire(victoire) == 1){
         cout<< "Bravo J1, vous avez gagne ! "<<endl;
-    }else{
+    }else if(verifVictoire(victoire) == 2){
         cout<< "Bravo J2, vous avez gagne ! "<<endl;
+    }else if(verifVictoire(victoire) == 3){
+        cout<< "Match nul"<<endl;
     }
 
 }
